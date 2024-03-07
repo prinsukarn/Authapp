@@ -5,10 +5,10 @@ import { login } from "../util/auth";
 import { Alert } from "react-native";
 
 function LoginScreen() {
-  const [isAuthenticating, setIsAuthnticating] = useState();
+  const [isAuthenticating, setIsAuthenticating] = useState();
 
   async function loginHandler({ email, password }) {
-    setIsAuthnticating(true);
+    setIsAuthenticating(true);
     try {
       await login(email, password);
     } catch (error) {
@@ -17,7 +17,7 @@ function LoginScreen() {
         "Please check your credentials or try again later"
       );
     }
-    setIsAuthnticating(false);
+    setIsAuthenticating(false);
   }
 
   if (isAuthenticating) {
