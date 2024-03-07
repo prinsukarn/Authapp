@@ -19,9 +19,8 @@ function SignupScreen() {
         "Authentication Failed!!",
         "Please check yoour input and try again later"
       );
+      setIsAuthnticating(false);
     }
-
-    setIsAuthnticating(false);
   }
 
   if (isAuthenticating) {
